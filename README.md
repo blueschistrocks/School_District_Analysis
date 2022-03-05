@@ -168,19 +168,26 @@ A chart of the Passing Scores By School Type is provide below:
 ![Reading Scores_by_school type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/31e752ced2380df08150a2318c3710ba87c3f64d/Resources/Orig_Perc_by_School_Type_Chart.png)
 
 
-## Results
+## Results of Original Analysis
 The results of the school district analysis appear to indicate that over all the charter school students received on average higher scores in math and reading district school students.  Additionally, the schools with total students ranging from 2,000 to 5,000 appear to have the lowest math and reading scores.  Higher total spending and/or higher spending per student does not appear to be a factor in better math and reading scores as the highest scores are at the lowest spending range of less than $584 per student and the lowest scores are in the highest spending range above $645 per student. The difference between the highest spend per student and the lowest per student spend is $91.  The charter schools tended to have much lower total student than the district schools, therefore total student numbers could be a major factor in lower test scores.  
 
 ## Re-Analysis Discussion
 
+The re-analysis of the district data sets was conducted by removing the 9th grade reading and math scores from the Thomas High School scores and replacing them with NaN. The code used to complete this is provide below. 
 
+	##Using the loc method on the student_data_df the reading scores from the 9th grade at Thomas High School were selected and replaced with NaN.
+	student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School') & (student_data_df['grade'] == "9th"),['reading_score']] = np.nan
+
+	##The above code was refactored to replace the math scores with NaN.
+	student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School') & (student_data_df['grade'] == "9th"),['math_score']] = np.nan
+	![image](https://user-images.githubusercontent.com/89749126/156900510-eb818759-4101-450b-a676-4caa65f290a7.png)
 
 
 ## Effect of 9th Grade Math and Reading Score Removal
 
 ### Re-Analysis District Summary
 
-![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/District_Summary_df.png)
+![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/07aa8d6b447af22ba91923f6dd1240906a1b3ee2/Resources/District_Summary_df.png)
 
 ## Re-Analysis School Summary 
 
