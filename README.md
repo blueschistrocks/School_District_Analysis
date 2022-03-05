@@ -74,8 +74,12 @@ The Per School Summary DataFrame was formatted using the following code:
 	per_school_summary_df["% Overall Passing"] = per_school_summary_df["% Overall Passing"].map("{:.0f}".format)
 	per_school_summary_df
 
-An image of the Per School summary DataFrame is provided below:
+An image of the Per School Summary DataFrame is provided below:
 ![Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_School_Summary_df.png)
+
+A chart of the Per School Summary Data is provide below:
+![Per School_summary_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Orignal_Perc_by_School_Chart.png)
+
 
 Images of the DateFrame showing only the top five and bottom five schools in the district is provided below:
 ![Top Five Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Top_5_Schools.png)
@@ -138,7 +142,7 @@ Below is an example of the code used to create the resulting Dataframes.
 
 The DataFrames were formatted using similar formatting code as shown is ?? above.
 
-Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame.  Below is an example of the code used to create the resulting Dataframe.
+Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame of scores by school type.  Below is an example of the code used to create the resulting Dataframe.
 
 	#Calculates averages for the desired columns. 
 	type_math_scores = per_school_summary_df.groupby(["School Type"]).mean()["Average Math Score"]
@@ -157,8 +161,12 @@ Using Groupby series were created with the average math and reading scores by sc
 
 The DataFrame was formatted using similar formatting code as shown is ?? above.
 
-Images of the two DateFrames provided below:
+An image of the two DateFrame is provided below:
 ![Reading Scores_by_school type](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Type.png)
+
+A chart of the Passing Scores By School Type is provide below:
+![Reading Scores_by_school type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/31e752ced2380df08150a2318c3710ba87c3f64d/Resources/Orig_Perc_by_School_Type_Chart.png)
+
 
 ## Results
 The results of the school district analysis appear to indicate that over all the charter school students received on average higher scores in math and reading district school students.  Additionally, the schools with total students ranging from 2,000 to 5,000 appear to have the lowest math and reading scores.  Higher total spending and/or higher spending per student does not appear to be a factor in better math and reading scores as the highest scores are at the lowest spending range of less than $584 per student and the lowest scores are in the highest spending range above $645 per student. The difference between the highest spend per student and the lowest per student spend is $91.  The charter schools tended to have much lower total student than the district schools, therefore total student numbers could be a major factor in lower test scores.  
@@ -177,6 +185,11 @@ The results of the school district analysis appear to indicate that over all the
 ## Re-Analysis School Summary 
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
+
+A chart of the Per School Summary Data is provide below:
+![Per School Summary type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Perc_by_School_Chart.png)
+
+
  ### Re-Analysis Top and Bottom Schools
  ![Top Five Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Top_5_Schools.png)
 ![Bottom Five School Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Bottom_5_Schools.png)
@@ -188,11 +201,16 @@ The results of the school district analysis appear to indicate that over all the
  ![M-by Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Math_by_Grade.png)
 ![reading by Grade ](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Reading_by_Grade.png)
 
-	
-	- Scores by School Spending
 
-- Scores by School Size
+### Scores by School Spending
+![Scores by School Spending](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Spending.png)
 
-	- Scores by School Type
+
+### Scores by School Size
+![Scores by School Size](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Size.png)
+
+
+### Scores by School Type
+![Scores by School Type](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Type.png)
 
 ## Summary
