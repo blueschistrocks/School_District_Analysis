@@ -138,7 +138,7 @@ Below is an example of the code used to create the resulting Dataframes.
 
 The DataFrames were formatted using similar formatting code as shown is ?? above.
 
-Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame.  Below is an example of the code used to create the resulting Dataframes.
+Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame.  Below is an example of the code used to create the resulting Dataframe.
 
 	#Calculates averages for the desired columns. 
 	type_math_scores = per_school_summary_df.groupby(["School Type"]).mean()["Average Math Score"]
@@ -155,26 +155,39 @@ Using Groupby series were created with the average math and reading scores by sc
 		  "% Passing Reading": type_passing_reading,
 		  "% Overall Passing": type_overall_passing})
 
-The DataFrames were formatted using similar formatting code as shown is ?? above.
+The DataFrame was formatted using similar formatting code as shown is ?? above.
 
 Images of the two DateFrames provided below:
 ![Reading Scores_by_school type](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Type.png)
-![Scores_by_Size](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Size.png)
 
+## Results
+The results of the school district analysis appear to indicate that over all the charter school students received on average higher scores in math and reading district school students.  Additionally, the schools with total students ranging from 2,000 to 5,000 appear to have the lowest math and reading scores.  Higher total spending and/or higher spending per student does not appear to be a factor in better math and reading scores as the highest scores are at the lowest spending range of less than $584 per student and the lowest scores are in the highest spending range above $645 per student. The difference between the highest spend per student and the lowest per student spend is $91.  The charter schools tended to have much lower total student than the district schools, therefore total student numbers could be a major factor in lower test scores.  ![image](https://user-images.githubusercontent.com/89749126/156869079-4c55d89d-7a64-45ed-8fe1-dccd88eb24cf.png)
 
 ## Re-Analysis Discussion
 
-## Results
 
-### Effect of 9th Grade Math and Reading Score Removal
 
-- District Summary
 
-- School Summary 
+## Effect of 9th Grade Math and Reading Score Removal
+
+### Re-Analysis District Summary
+
+![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/District_Summary_df.png)
+
+## Re-Analysis School Summary 
+
+![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
+ ### Re-Analysis Top and Bottom Schools
+ ![Top Five Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Top_5_Schools.png)
+![Bottom Five School Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Bottom_5_Schools.png)
+ 
 
 - Effect on Thomas High School 
 
-	- Math and Ready Scores by Grade
+### Math and Reading Scores by Grade
+ ![M-by Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Math_by_Grade.png)
+![reading by Grade ](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Reading_by_Grade.png)
+
 	
 	- Scores by School Spending
 
