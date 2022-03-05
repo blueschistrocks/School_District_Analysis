@@ -79,7 +79,7 @@ An image of the Per School summary DataFrame is provided below:
 
 Images of the DateFrame showing only the top five and bottom five schools in the district is provided below:
 ![Top Five Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Top_5_Schools.png)
-![Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Bottom_5_Schools.png)
+![Bottom Five School Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Bottom_5_Schools.png)
 
 Using conditionals and Groupby series were created with the average math and reading scores by grade and school.  The series were merged in to DataFrames, one with math scores by grade and school and one with reading scores by grade and school. Below is an example of the code used to create the resulting Dataframes.
 
@@ -118,9 +118,15 @@ Using conditionals and Groupby series were created with the average math and rea
 
 The DataFrames were formatted using similar formatting code as shown is ?? above.
 
-Images of the DateFrames with average reading scores and average math scores are provided here and here.
+Images of the DateFrames with average reading scores and average math scores are provided below:
+![Average_Reading_by_Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Average_Reading_by_Grade.png)
+![Average_Math_by_Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Average_Math_by_Grade.png)
 
-Two Dataframes in the images below were created using Bin and Groupby to group the math and reading scores and percentages by spending ranges and by school size.  Below is an example of the code used to create the resulting Dataframes.
+Two Dataframes in the images below were created using Bin and Groupby to group the math and reading scores and percentages by spending ranges and by school size.
+![Scores_by_Spending](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Spending.png)
+![Scores_by_Size](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Size.png)
+
+Below is an example of the code used to create the resulting Dataframes.
 
 	#Establishing the bins.
 	size_bins = [0, 1000, 2000, 5000]
@@ -151,7 +157,9 @@ Using Groupby series were created with the average math and reading scores by sc
 
 The DataFrames were formatted using similar formatting code as shown is ?? above.
 
-Images of the DateFrames provided here and here.
+Images of the two DateFrames provided below:
+![Reading Scores_by_school type](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Type.png)
+![Scores_by_Size](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Size.png)
 
 
 ## Re-Analysis Discussion
