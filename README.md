@@ -138,7 +138,7 @@ Below is an example of the code used to create the resulting Dataframes.
 
 The DataFrames were formatted using similar formatting code as shown is ?? above.
 
-Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame.  Below is an example of the code used to create the resulting Dataframe.
+Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame of scores by school type.  Below is an example of the code used to create the resulting Dataframe.
 
 	#Calculates averages for the desired columns. 
 	type_math_scores = per_school_summary_df.groupby(["School Type"]).mean()["Average Math Score"]
@@ -157,8 +157,12 @@ Using Groupby series were created with the average math and reading scores by sc
 
 The DataFrame was formatted using similar formatting code as shown is ?? above.
 
-Images of the two DateFrames provided below:
+An image of the two DateFrame is provided below:
 ![Reading Scores_by_school type](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Type.png)
+
+A graph of the Scores By School Type is priovide below:
+![Reading Scores_by_school type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/31e752ced2380df08150a2318c3710ba87c3f64d/Resources/Orig_Perc_by_School_Type_Chart.png)
+
 
 ## Results
 The results of the school district analysis appear to indicate that over all the charter school students received on average higher scores in math and reading district school students.  Additionally, the schools with total students ranging from 2,000 to 5,000 appear to have the lowest math and reading scores.  Higher total spending and/or higher spending per student does not appear to be a factor in better math and reading scores as the highest scores are at the lowest spending range of less than $584 per student and the lowest scores are in the highest spending range above $645 per student. The difference between the highest spend per student and the lowest per student spend is $91.  The charter schools tended to have much lower total student than the district schools, therefore total student numbers could be a major factor in lower test scores.  
