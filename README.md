@@ -74,8 +74,12 @@ The Per School Summary DataFrame was formatted using the following code:
 	per_school_summary_df["% Overall Passing"] = per_school_summary_df["% Overall Passing"].map("{:.0f}".format)
 	per_school_summary_df
 
-An image of the Per School summary DataFrame is provided below:
+An image of the Per School Summary DataFrame is provided below:
 ![Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_School_Summary_df.png)
+
+A chart of the Per School Summary Data is provide below:
+![Per School_summary_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Orignal_Perc_by_School_Chart.png)
+
 
 Images of the DateFrame showing only the top five and bottom five schools in the district is provided below:
 ![Top Five Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Top_5_Schools.png)
@@ -160,7 +164,7 @@ The DataFrame was formatted using similar formatting code as shown is ?? above.
 An image of the two DateFrame is provided below:
 ![Reading Scores_by_school type](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Type.png)
 
-A graph of the Scores By School Type is priovide below:
+A chart of the Passing Scores By School Type is provide below:
 ![Reading Scores_by_school type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/31e752ced2380df08150a2318c3710ba87c3f64d/Resources/Orig_Perc_by_School_Type_Chart.png)
 
 
@@ -181,6 +185,11 @@ The results of the school district analysis appear to indicate that over all the
 ## Re-Analysis School Summary 
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
+
+A chart of the Per School Summary Data is provide below:
+![Per School Summary type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Perc_by_School_Chart.png)
+
+
  ### Re-Analysis Top and Bottom Schools
  ![Top Five Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Top_5_Schools.png)
 ![Bottom Five School Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Bottom_5_Schools.png)
@@ -192,11 +201,16 @@ The results of the school district analysis appear to indicate that over all the
  ![M-by Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Math_by_Grade.png)
 ![reading by Grade ](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Reading_by_Grade.png)
 
-	
-	- Scores by School Spending
 
-- Scores by School Size
+### Scores by School Spending
+![Scores by School Spending](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Spending.png)
 
-	- Scores by School Type
+
+### Scores by School Size
+![Scores by School Size](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Size.png)
+
+
+### Scores by School Type
+![Scores by School Type](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Type.png)
 
 ## Summary
