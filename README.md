@@ -3,7 +3,7 @@
 ## Purpose
 The purpose of the school district analysis was to clean, review and provide summary data frames of the data sets provided by the school district.  In addition, the school district asked to have the data reanalyzed due to evidence of academic dishonesty associated with the reading and math grades.
 
-## Code Discussion
+## Original Code Discussion
 The analysis was conducted using Panda within a Jupiter Notebook. The two data sets (schools_complete.csv and students_complete.csv) were loaded into data two frames, reviewed for missing data and errors.  The primary issue with the data sets involved the student names in the students_complete.csv data set.  The names were indicated to have erroneous prefixes and suffixes, which were removed iterating through the names and replacing the erroneous prefixes and suffixes with an empty space using the following code:
 
 	##List of prefixes and suffixes
@@ -17,7 +17,8 @@ Once the data sets were reviewed cleans the two data frames were combined using 
 
 	#Combines the two dateframes into a single dataset
 	school_data_complete_df = pd.merge(student_data_df, school_data_df, how="left", on=["school_name", "school_name"]) 
-
+	
+### Original District Summary DataFrame	
 Using the merged data frame, a summary DataFrame of the school district data was created by finding the total school count, total students, total budget, average math score, average reading score, precent passed math, percent passing reading and a overall percentage of passing. This information was placed into a DataFrame using the following code:
 
 	#District summary DataFrame 
@@ -28,8 +29,8 @@ Using the merged data frame, a summary DataFrame of the school district data was
 		  "Average Math Score": average_math_score, 
 		  "Average Reading Score": average_reading_score,
 		  "% Passing Math": passing_math_percentage,
-		 "% Passing Reading": passing_reading_percentage,
-		"% Overall Passing": overall_passing_percentage}])
+		  "% Passing Reading": passing_reading_percentage,
+		  "% Overall Passing": overall_passing_percentage}])
 
 The district summary DataFrame was formatted using the following code:
 
@@ -45,8 +46,8 @@ The district summary DataFrame was formatted using the following code:
 An image of the district summary DataFrame is provided below:
 ![District Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_District_Summary.png)
 
-
-A Per School Summary DataFrame was created by finding the school types, total students per school, total budget per school, average math score per school, average reading score per school, precent passed math per school, percent passing reading per school and an overall percentage of passing per school. This information was placed into a DataFrame using the following code:
+### Original School Summary DataFrame
+A School Summary DataFrame was created by finding the school types, total students per school, total budget per school, average math score per school, average reading score per school, precent passed math per school, percent passing reading per school and an overall percentage of passing per school. This information was placed into a DataFrame using the following code:
 
 	#Per school summary data frame
 	per_school_summary_df = pd.DataFrame({
@@ -62,7 +63,6 @@ A Per School Summary DataFrame was created by finding the school types, total st
 
 The Per School Summary DataFrame was formatted using the following code:
 
-
 	#Formating code
 	per_school_summary_df["Total School Budget"] = per_school_summary_df["Total School Budget"].map("${:,.0f}".format)
 	per_school_summary_df["Per Student Budget"] = per_school_summary_df["Per Student Budget"].map("${:,.0f}".format)
@@ -74,17 +74,18 @@ The Per School Summary DataFrame was formatted using the following code:
 	per_school_summary_df["% Overall Passing"] = per_school_summary_df["% Overall Passing"].map("{:.0f}".format)
 	per_school_summary_df
 
-An image of the Per School Summary DataFrame is provided below:
+An image of the School Summary DataFrame is provided below:
 ![Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_School_Summary_df.png)
 
-A chart of the Per School Summary Data is provide below:
+A chart of the School Summary Data is provide below:
 ![Per School_summary_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Orignal_Perc_by_School_Chart.png)
 
-
+### Original Top and Bottom Five Schools
 Images of the DateFrame showing only the top five and bottom five schools in the district is provided below:
 ![Top Five Scool Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Top_5_Schools.png)
 ![Bottom Five School Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Bottom_5_Schools.png)
 
+### Original Math and Reading Scores by Grade
 Using conditionals and Groupby series were created with the average math and reading scores by grade and school.  The series were merged in to DataFrames, one with math scores by grade and school and one with reading scores by grade and school. Below is an example of the code used to create the resulting Dataframes.
 
 	#Creates a Series of scores by grade levels using conditionals.
@@ -120,12 +121,13 @@ Using conditionals and Groupby series were created with the average math and rea
 		      "11th": eleventh_grade_reading_scores,
 		      "12th": twelfth_grade_reading_scores})
 
-The DataFrames were formatted using similar formatting code as shown is ?? above.
+The DataFrames were formatted using similar formatting code use in the DataFrames discussed above.
 
 Images of the DateFrames with average reading scores and average math scores are provided below:
 ![Average_Reading_by_Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Average_Reading_by_Grade.png)
 ![Average_Math_by_Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Average_Math_by_Grade.png)
 
+### Original School Spending and School Size Summaries
 Two Dataframes in the images below were created using Bin and Groupby to group the math and reading scores and percentages by spending ranges and by school size.
 ![Scores_by_Spending](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Spending.png)
 ![Scores_by_Size](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Size.png)
@@ -140,8 +142,9 @@ Below is an example of the code used to create the resulting Dataframes.
 	per_school_summary_df["Total Students"] = per_school_summary_df["Total Students"].astype(float)
 	per_school_summary_df["School Size"] = pd.cut(per_school_summary_df["Total Students"], size_bins, labels=group_names)
 
-The DataFrames were formatted using similar formatting code as shown is ?? above.
+The DataFrames were formatted using similar formatting code use in the DataFrames discussed above.
 
+### Original Scores by School Type
 Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame of scores by school type.  Below is an example of the code used to create the resulting Dataframe.
 
 	#Calculates averages for the desired columns. 
@@ -159,7 +162,7 @@ Using Groupby series were created with the average math and reading scores by sc
 		  "% Passing Reading": type_passing_reading,
 		  "% Overall Passing": type_overall_passing})
 
-The DataFrame was formatted using similar formatting code as shown is ?? above.
+The DataFrames were formatted using similar formatting code use in the DataFrames discussed above.
 
 An image of the two DateFrame is provided below:
 ![Reading Scores_by_school type](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Type.png)
@@ -182,14 +185,73 @@ The re-analysis of the district data sets was conducted by removing the 9th grad
 	student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School') & (student_data_df['grade'] == "9th"),['math_score']] = np.nan
 	![image](https://user-images.githubusercontent.com/89749126/156900510-eb818759-4101-450b-a676-4caa65f290a7.png)
 
+Using the following code, the percent passing math and reading for Thomas High School were re-calculated without the 9th grade class.  The re-calculated percent passing was added to the the per_school_summary_df.
 
-## Effect of 9th Grade Math and Reading Score Removal
+	##Get the number of 10th-12th graders from Thomas High School (THS).
+	Thomas_high_10th_df = school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School") 
+						  & (school_data_complete_df["grade"] == "10th")]
+	Thomas_HS_students_10th = Thomas_high_10th_df["student_name"].count()
+
+	Thomas_high_11th_df = school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School") 
+						  & (school_data_complete_df["grade"] == "11th")]
+	Thomas_HS_students_11th = Thomas_high_11th_df["student_name"].count()
+
+	Thomas_high_12th_df = school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School") 
+						  & (school_data_complete_df["grade"] == "12th")]
+	Thomas_HS_students_12th = Thomas_high_12th_df["student_name"].count()
+
+	THS_10_11_12_Stud = Thomas_HS_students_10th + Thomas_HS_students_11th + Thomas_HS_students_12th
+	THS_10_11_12_Stud
+
+	##Get all the students passing math from THS
+	frames = [Thomas_high_10th_df, Thomas_high_11th_df, Thomas_high_12th_df]
+	THS_School_data_df = pd.concat(frames)
+	passing_math_THS = THS_School_data_df[THS_School_data_df["math_score"] >= 70]
+	passing_math_THS.head()
+
+	##Get all the students passing reading from THS
+	passing_reading_THS = THS_School_data_df[THS_School_data_df["reading_score"] >= 70]
+	passing_reading_THS.head()
+
+	##Get all the students passing math and reading from THS
+	passing_math_reading_THS = THS_School_data_df[(THS_School_data_df["math_score"] >= 70) & (THS_School_data_df["reading_score"] >= 70)]
+	passing_math_reading_THS.head()
+
+	##Calculate the percentage of 10th-12th grade students passing math from Thomas High School. 
+	passing_math_THS_count = passing_math_THS["student_name"].count()
+	passing_math_percentage_THS = passing_math_THS_count / float(THS_10_11_12_Stud) * 100
+	passing_math_percentage_THS
+
+	##Calculate the percentage of 10th-12th grade students passing reading from Thomas High School.
+	passing_reading_THS_count = passing_reading_THS["student_name"].count()
+	passing_reading_percentage_THS = passing_reading_THS_count / float(THS_10_11_12_Stud) * 100
+	passing_reading_percentage_THS
+
+	##Calculate the overall passing percentage of 10th-12th grade from Thomas High School. 
+	passing_math_reading_THS_count = passing_math_reading_THS["student_name"].count()
+	passing_math_reading_percentage_THS = passing_math_reading_THS_count / float(THS_10_11_12_Stud) * 100
+	passing_math_reading_percentage_THS	
+
+	##Replace the passing math percent for Thomas High School in the per_school_summary_df.
+	per_school_summary_df.loc[(per_school_summary_df['Total Students'] == 1635), "% Passing Math"] = passing_math_percentage_THS
+	#df.loc[(df.Event == 'Dance'),'Event']='Hip-Hop'
+
+	##Replace the passing reading percentage for Thomas High School in the per_school_summary_df.
+	per_school_summary_df.loc[(per_school_summary_df['Total Students'] == 1635),
+				  "% Passing Reading"] = passing_reading_percentage_THS
+
+	##Replace the overall passing percentage for Thomas High School in the per_school_summary_df.
+	per_school_summary_df.loc[(per_school_summary_df['Total Students'] == 1635),
+				  "% Overall Passing"] = passing_math_reading_percentage_THS
+	
 
 ### Re-Analysis District Summary
+The effect of the removal of the scores for the 9th grade class on the District Summary was negligible.
 
 ![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/07aa8d6b447af22ba91923f6dd1240906a1b3ee2/Resources/District_Summary_df.png)
 
 ## Re-Analysis School Summary 
+Since the Thomas High School percentage were recalculated without the 9th grade class there was no effect on the school summary as a whole.
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
 
@@ -202,10 +264,14 @@ A chart of the Per School Summary Data is provide below:
 ![Bottom Five School Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Bottom_5_Schools.png)
  
 
-- Effect on Thomas High School 
+### Effect on Thomas High School 
+Since the math and reading scores were re-calculated the effect on Thomas Hight School was negligible.  However, if the scores were not recalculated the effect would have been significant, see below for the Thomas High School Scores without the 9th grade class prior to the recalculation.
+![image](https://github.com/blueschistrocks/School_District_Analysis/blob/5b3604d5cf8a72544905f8617c70cf9c899ce176/Resources/THS_before_recal.png)
 
-### Math and Reading Scores by Grade
- ![M-by Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Math_by_Grade.png)
+## Effect of 9th Grade Math and Reading Score Removal### Math and Reading Scores by Grade
+The effect of the removal of the scores for the 9th grade class was that there were no grades to analyze therefore no information could be obtained regarding the 9th grade class.
+
+![M-by Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Math_by_Grade.png)
 ![reading by Grade ](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Reading_by_Grade.png)
 
 
