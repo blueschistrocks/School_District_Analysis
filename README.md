@@ -1,10 +1,10 @@
 # School District Overview Analysis
 
 ## Purpose
-The purpose of the school district analysis was to clean, review and provide summary data frames of the data sets provided by the school district.  In addition, the school district asked to have the data reanalyzed due to evidence of academic dishonesty associated with the 9th grade reading and math grades at Thomas High School.
+The purpose of the school district analysis was to clean, review and provide an analysis of the data using summary DataFrames. In addition, the school district asked to have the data reanalyzed due to evidence of academic dishonesty associated with the 9th grade reading and math grades at Thomas High School.  
 
 ## Original Code Discussion
-The analysis was conducted using Pandas within a Jupiter Notebook. The two data sets (schools_complete.csv and students_complete.csv) were loaded into two DataFrames, and reviewed for missing data and errors.  The primary issue with the data sets involved the student names in the students_complete.csv data set.  The names were indicated to have erroneous prefixes and suffixes, which were removed by iterating through the names and replacing the erroneous prefixes and suffixes with an empty space using the following code:
+The analysis was conducted using Pandas within a Jupiter Notebook. The two data sets provided by the school district (schools_complete.csv and students_complete.csv) were loaded into two DataFrames, and reviewed for missing data and errors.  The primary issue with the data sets involved the student names in the students_complete.csv data set.  The names were indicated to have erroneous prefixes and suffixes, which were removed by iterating through the names and replacing the erroneous prefixes and suffixes with an empty space using the following code:
 
 	##List of prefixes and suffixes
 	prefixes_suffixes = ["Dr. ", "Mr. ","Ms. ", "Mrs. ", "Miss ", " MD", " DDS", " DVM", " PhD"]
@@ -183,7 +183,6 @@ With the data sets provided it appears the major factor in test scores is the to
 ### Recommendations
 
 It recommended that the school district provide additional data such as the number of teachers per student and data on how each school is spending their budget.  With this additional data the results an analysis could provide a more accurate determination of why certain schools have higher test scores than others.
-![image](https://user-images.githubusercontent.com/89749126/156944680-466a8bc0-0da0-4f54-b537-e2109c0ab08e.png)
 
 
 ## Re-Analysis Discussion
@@ -196,7 +195,7 @@ The re-analysis of the district data sets was conducted by removing the 9th grad
 	##The above code was refactored to replace the math scores with NaN.
 	student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School') & (student_data_df['grade'] == "9th"),['math_score']] = np.nan
 
-Using the following code, the percent passing math and reading for Thomas High School were re-calculated without the 9th grade class.  The re-calculated percent passing was added to the the per_school_summary_df.
+Using the following code, the percent passing math and reading for Thomas High School were re-calculated without the 9th grade class students in the total student number.  The re-calculated percent passing was added to the the per_school_summary_df.
 
 	##Get the number of 10th-12th graders from Thomas High School (THS).
 	Thomas_high_10th_df = school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School") 
@@ -257,12 +256,12 @@ Using the following code, the percent passing math and reading for Thomas High S
 	
 
 ### Re-Analysis District Summary
-The effect of the removal of the scores for the 9th grade class on the District Summary was viable but negligible.
+The effect of the removal of the scores for the 9th grade class on the District Summary was noticable but negligible.
 
 ![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/07aa8d6b447af22ba91923f6dd1240906a1b3ee2/Resources/District_Summary_df.png)
 
 ## Re-Analysis School Summary 
-Since the Thomas High School percentage were recalculated without the 9th grade class there was no effect on the school summary as a whole.
+Since the Thomas High School percentages were recalculated without the 9th grade class total student numbers there was no effect on the school summary as a whole. With out removeing the 9th grade total student numbers the effect 
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
 
