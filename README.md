@@ -255,7 +255,10 @@ Since the Thomas High School percentage were recalculated without the 9th grade 
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
 
-A chart of the Per School Summary Data is provide below:
+A chart of the Per School Summary Data prior to the Thomas High School Recalculation is provide below:
+![Per School Summary type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Perc_by_School_Chart.png)
+
+A chart of the Per School Summary Data after the Thomas High School Recalculation is provide below:
 ![Per School Summary type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Perc_by_School_Chart.png)
 
 
