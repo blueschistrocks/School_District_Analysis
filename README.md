@@ -44,7 +44,7 @@ The district summary DataFrame was formatted using the following code:
 	district_summary_df["% Overall Passing"] = district_summary_df["% Overall Passing"].map("{:.1f}".format)
 
 An image of the district summary DataFrame is provided below:
-![District Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_District_Summary.png)
+![District Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/12ab668429a5d67b2d187e78c36b43c4f1720639/Resources/Orig_District_Summary.png)
 
 ### Original School Summary DataFrame
 A School Summary DataFrame was created by finding the school types, total students per school, total budget per school, average math score per school, average reading score per school, precent passed math per school, percent passing reading per school and an overall percentage of passing per school. This information was placed into a DataFrame using the following code:
@@ -183,7 +183,6 @@ The re-analysis of the district data sets was conducted by removing the 9th grad
 
 	##The above code was refactored to replace the math scores with NaN.
 	student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School') & (student_data_df['grade'] == "9th"),['math_score']] = np.nan
-	![image](https://user-images.githubusercontent.com/89749126/156900510-eb818759-4101-450b-a676-4caa65f290a7.png)
 
 Using the following code, the percent passing math and reading for Thomas High School were re-calculated without the 9th grade class.  The re-calculated percent passing was added to the the per_school_summary_df.
 
@@ -279,18 +278,21 @@ The effect of the removal of the scores for the 9th grade class was that there w
 
 
 ### Scores by School Spending
-Scores by school spending were not affected.
+Scores by school spending were not affected after recalculation.
 ![Scores by School Spending](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Spending.png)
 
 ### Scores by School Size
-Scores by school size were not affected.
+Scores by school size were not affected after recalculation.
 ![Scores by School Size](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Size.png)
 
 
 ### Scores by School Type
-Scores by school Type were not affected.
+Scores by school Type were not affected after recalculation.
 ![Scores by School Type](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Type.png)
 
 
 ## Summary
+The removal of the 9th grade math and reading scores significantly reduced the percent passing of the math, reading and overall percent passing for the entire school.  If not for the re-calculation Thomas High School would have lost its spot in the top five schools in the district.
+The removal of the scores also affected a minor but negligible change in the district percent passing.  
+
 
