@@ -1,10 +1,10 @@
 # School District Overview Analysis
 
 ## Purpose
-The purpose of the school district analysis was to clean, review and provide summary data frames of the data sets provided by the school district.  In addition, the school district asked to have the data reanalyzed due to evidence of academic dishonesty associated with the reading and math grades.
+The purpose of the school district analysis was to clean, review and provide summary data frames of the data sets provided by the school district.  In addition, the school district asked to have the data reanalyzed due to evidence of academic dishonesty associated with the 9th grade reading and math grades at Thomas High School.
 
 ## Original Code Discussion
-The analysis was conducted using Panda within a Jupiter Notebook. The two data sets (schools_complete.csv and students_complete.csv) were loaded into data two frames, reviewed for missing data and errors.  The primary issue with the data sets involved the student names in the students_complete.csv data set.  The names were indicated to have erroneous prefixes and suffixes, which were removed iterating through the names and replacing the erroneous prefixes and suffixes with an empty space using the following code:
+The analysis was conducted using Pandas within a Jupiter Notebook. The two data sets (schools_complete.csv and students_complete.csv) were loaded into two DataFrames, and reviewed for missing data and errors.  The primary issue with the data sets involved the student names in the students_complete.csv data set.  The names were indicated to have erroneous prefixes and suffixes, which were removed by iterating through the names and replacing the erroneous prefixes and suffixes with an empty space using the following code:
 
 	##List of prefixes and suffixes
 	prefixes_suffixes = ["Dr. ", "Mr. ","Ms. ", "Mrs. ", "Miss ", " MD", " DDS", " DVM", " PhD"]
@@ -13,13 +13,13 @@ The analysis was conducted using Panda within a Jupiter Notebook. The two data s
 	for word in prefixes_suffixes:
 	    student_data_df["student_name"] = student_data_df["student_name"].str.replace(word,"")
 
-Once the data sets were reviewed cleans the two data frames were combined using a left merge into a single DataFrameusing the following code:
+Once the data sets were reviewed and cleand the two DataFrames were combined using a left merge into a single DataFrame using the following code:
 
 	#Combines the two dateframes into a single dataset
 	school_data_complete_df = pd.merge(student_data_df, school_data_df, how="left", on=["school_name", "school_name"]) 
 	
 ### Original District Summary DataFrame	
-Using the merged data frame, a summary DataFrame of the school district data was created by finding the total school count, total students, total budget, average math score, average reading score, precent passed math, percent passing reading and a overall percentage of passing. This information was placed into a DataFrame using the following code:
+Using the merged DataFrames, a Ditrict Summary DataFrame was created by finding the total school count, total student count, total budget, average math score, average reading score, precent passed in math, percent passing in reading and an overall percentage of passing. This information was placed into a DataFrame using the following code:
 
 	#District summary DataFrame 
 	district_summary_df = pd.DataFrame(
@@ -47,7 +47,7 @@ An image of the district summary DataFrame is provided below:
 ![District Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/12ab668429a5d67b2d187e78c36b43c4f1720639/Resources/Orig_District_Summary.png)
 
 ### Original School Summary DataFrame
-A School Summary DataFrame was created by finding the school types, total students per school, total budget per school, average math score per school, average reading score per school, precent passed math per school, percent passing reading per school and an overall percentage of passing per school. This information was placed into a DataFrame using the following code:
+Using the merged DataFrames a School Summary DataFrame was created by finding the school types, total students per school, total budget per school, average math score per school, average reading score per school, precent passed math per school, percent passing reading per school and an overall percentage of passing per school. This information was placed into a new DataFrame using the following code:
 
 	#Per school summary data frame
 	per_school_summary_df = pd.DataFrame({
@@ -61,7 +61,7 @@ A School Summary DataFrame was created by finding the school types, total studen
 	    "% Passing Reading": per_school_passing_reading,
 	    "% Overall Passing": per_overall_passing_percentage})
 
-The Per School Summary DataFrame was formatted using the following code:
+The School Summary DataFrame was formatted using the following code:
 
 	#Formating code
 	per_school_summary_df["Total School Budget"] = per_school_summary_df["Total School Budget"].map("${:,.0f}".format)
@@ -86,7 +86,7 @@ Images of the DateFrame showing only the top five and bottom five schools in the
 ![Bottom Five School Summary DF](https://github.com/blueschistrocks/School_District_Analysis/blob/8e734a4bb150135c4dc661f263e19e6197383686/Resources/Orig_Bottom_5_Schools.png)
 
 ### Original Math and Reading Scores by Grade
-Using conditionals and Groupby series were created with the average math and reading scores by grade and school.  The series were merged in to DataFrames, one with math scores by grade and school and one with reading scores by grade and school. Below is an example of the code used to create the resulting Dataframes.
+Using conditionals and Groupby four series were created with the average math and reading scores by grade and school.  The series were merged in to DataFrames, one with math scores by grade and school and one with reading scores by grade and school. Below is an example of the code used to create the resulting Dataframes.
 
 	#Creates a Series of scores by grade levels using conditionals.
 	ninth_graders = school_data_complete_df[(school_data_complete_df["grade"] == "9th")]
@@ -121,7 +121,7 @@ Using conditionals and Groupby series were created with the average math and rea
 		      "11th": eleventh_grade_reading_scores,
 		      "12th": twelfth_grade_reading_scores})
 
-The DataFrames were formatted using similar formatting code use in the DataFrames discussed above.
+The DataFrames were formatted using similar formatting code use in the DataFrames discussed in the sections above.
 
 Images of the DateFrames with average reading scores and average math scores are provided below:
 ![Average_Reading_by_Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Average_Reading_by_Grade.png)
@@ -142,7 +142,7 @@ Below is an example of the code used to create the resulting Dataframes.
 	per_school_summary_df["Total Students"] = per_school_summary_df["Total Students"].astype(float)
 	per_school_summary_df["School Size"] = pd.cut(per_school_summary_df["Total Students"], size_bins, labels=group_names)
 
-The DataFrames were formatted using similar formatting code use in the DataFrames discussed above.
+The DataFrames were formatted using similar formatting code use in the DataFrames discussed in the sections above.
 
 ### Original Scores by School Type
 Using Groupby series were created with the average math and reading scores by school type.  The series were merged in to a DataFrame of scores by school type.  Below is an example of the code used to create the resulting Dataframe.
@@ -162,17 +162,29 @@ Using Groupby series were created with the average math and reading scores by sc
 		  "% Passing Reading": type_passing_reading,
 		  "% Overall Passing": type_overall_passing})
 
-The DataFrames were formatted using similar formatting code use in the DataFrames discussed above.
+The DataFrames were formatted using similar formatting code use in the DataFrames discussed in the sections above.
 
-An image of the two DateFrame is provided below:
+An image of the DateFrame is provided below:
 ![Reading Scores_by_school type](https://github.com/blueschistrocks/School_District_Analysis/blob/e6184b1f38b739968a3b63e3b9fd153fac7c64a1/Resources/Orig_Scores_by_Type.png)
 
 A chart of the Passing Scores By School Type is provide below:
 ![Reading Scores_by_school type_chart](https://github.com/blueschistrocks/School_District_Analysis/blob/31e752ced2380df08150a2318c3710ba87c3f64d/Resources/Orig_Perc_by_School_Type_Chart.png)
 
 
-## Results of Original Analysis
-The results of the school district analysis appear to indicate that over all the charter school students received on average higher scores in math and reading district school students.  Additionally, the schools with total students ranging from 2,000 to 5,000 appear to have the lowest math and reading scores.  Higher total spending and/or higher spending per student does not appear to be a factor in better math and reading scores as the highest scores are at the lowest spending range of less than $584 per student and the lowest scores are in the highest spending range above $645 per student. The difference between the highest spend per student and the lowest per student spend is $91.  The charter schools tended to have much lower total student than the district schools, therefore total student numbers could be a major factor in lower test scores.  
+## Results and Conclusions of Original Analysis
+The results of the school district analysis appear to indicate that overall, the charter school students received higher scores in math and reading than district school students.  The charter schools tended to have much lower total students than the district schools. Additionally, the schools with total students ranging from 2,000 to 5,000 appear to have the lowest math and reading scores.  Based on this data total student numbers may likely be a major factor in lower test scores. 
+
+Higher total spending and/or higher spending per student does not appear to be a dominant factor in better math and reading scores.  Higher scores were evident in the lowest spending range of less than $584 per student and the lowest scores were evident in the highest spending range above $645 per student. 
+
+### Conclusions 
+
+With the data sets provided it appears the major factor in test scores is the total student number.  It should be noted that the data set is limited in the types of data that would be useful in making a more detailed analysis and subsequent determination of reason certain schools had higher of lower test scores. 
+
+### Recommendations
+
+It recommended that the school district provide additional data such as the number of teachers per student and data on how each school is spending their budget.  With this additional data the results an analysis could provide a more accurate determination of why certain schools have higher test scores than others.
+![image](https://user-images.githubusercontent.com/89749126/156944680-466a8bc0-0da0-4f54-b537-e2109c0ab08e.png)
+
 
 ## Re-Analysis Discussion
 
