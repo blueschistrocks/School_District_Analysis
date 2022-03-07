@@ -178,12 +178,11 @@ Higher total spending and/or higher spending per student does not appear to be a
 
 ### Conclusions 
 
-With the data sets provided it appears the major factor in test scores is the total student number.  It should be noted that the data set is limited in the types of data that would be useful in making a more detailed analysis and subsequent determination of reason certain schools had higher of lower test scores. 
+With the data sets provided it appears the major factor in test scores is the total student number.  It should be noted that the data set is limited in the types of data that would be useful in making a more detailed analysis and a subsequent determination of the reason certain schools had higher or lower test scores. 
 
 ### Recommendations
 
-It recommended that the school district provide additional data such as the number of teachers per student and data on how each school is spending their budget.  With this additional data the results an analysis could provide a more accurate determination of why certain schools have higher test scores than others.
-
+It is recommended that the school district provide additional data such as the number of teachers per student and data on how each school is spending their budget.  With this additional data a more accurate analysis could provide a more concise determination of why certain schools have higher test scores than others.
 
 ## Re-Analysis Discussion
 
@@ -256,12 +255,12 @@ Using the following code, the percent passing math and reading for Thomas High S
 	
 
 ### Re-Analysis District Summary
-The effect of the removal of the scores for the 9th grade class on the District Summary was noticable but negligible.
+The affect of the removal of the scores for the 9th grade class on the District Summary was noticable but negligible.
 
 ![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/07aa8d6b447af22ba91923f6dd1240906a1b3ee2/Resources/District_Summary_df.png)
 
 ## Re-Analysis School Summary 
-Since the Thomas High School percentages were re-calculated without the 9th grade class total student numbers there was no effect on the school summary as a whole. Without removing the 9th grade total student numbers the effect was only evident within the passing percentages at Thomas High School.
+Since the Thomas High School percentages were re-calculated without the 9th grade class total student numbers there was no affect on the school summary as a whole. Without removing the 9th grade total student numbers the effect was only evident within the passing percentages at Thomas High School.
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
 
@@ -278,15 +277,14 @@ A chart of the Per School Summary Data after the Thomas High School Recalculatio
  
 
 ### Effect on Thomas High School 
-Since the math and reading scores were re-calculated the effect on Thomas Hight School was negligible.  However, if the scores had not been re-calculated the affect would have been significant, see below for the Thomas High School Scores without the 9th grade class prior to the re-calculation.
+Since the math and reading scores were re-calculated the effect on Thomas Hight School was negligible.  However, if the scores had not been re-calculated the effect would have been significant, see below for the Thomas High School Scores without the 9th grade class prior to the re-calculation.
 ![image](https://github.com/blueschistrocks/School_District_Analysis/blob/5b3604d5cf8a72544905f8617c70cf9c899ce176/Resources/THS_before_recal.png)
 
 ## Effect of 9th Grade Math and Reading Score Removal and Math and Reading Scores by Grade
-The effect of the removal of the scores for the 9th grade class was that there were no grades to analyze therefore no information could be obtained regarding the 9th grade class.  Math and Reading scores by other grades at Thomas High School or in all grades in other schools were not affected due to the re-calculation. 
+The affect of the removal of the scores for the 9th grade class was that there were no grades to analyze therefore no information could be obtained regarding the 9th grade class.  Math and Reading scores by other grades at Thomas High School or in all grades in other schools were not affected due to the re-calculation. 
 
 ![M-by Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Math_by_Grade.png)
 ![reading by Grade ](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Reading_by_Grade.png)
-
 
 ### Scores by School Spending
 Scores by school spending were not affected after re-calculation.
