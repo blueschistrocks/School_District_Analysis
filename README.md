@@ -260,7 +260,7 @@ The affect of the removal of the scores for the 9th grade class on the District 
 ![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/07aa8d6b447af22ba91923f6dd1240906a1b3ee2/Resources/District_Summary_df.png)
 
 ## Re-Analysis School Summary 
-Since the Thomas High School percentages were re-calculated without the 9th grade class total student numbers there was no affect on the school summary as a whole. Without removing the 9th grade total student numbers the effect was only evident within the passing percentages at Thomas High School.
+Since the Thomas High School percentages were re-calculated without the 9th grade class total student numbers there was no effect on the school summary as a whole. Without removing the 9th grade total student numbers the effect was only evident within the passing percentages at Thomas High School.
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
 
@@ -281,26 +281,26 @@ Since the math and reading scores were re-calculated the effect on Thomas Hight 
 ![image](https://github.com/blueschistrocks/School_District_Analysis/blob/5b3604d5cf8a72544905f8617c70cf9c899ce176/Resources/THS_before_recal.png)
 
 ## Effect of 9th Grade Math and Reading Score Removal and Math and Reading Scores by Grade
-The affect of the removal of the scores for the 9th grade class was that there were no grades to analyze therefore no information could be obtained regarding the 9th grade class.  Math and Reading scores by other grades at Thomas High School or in all grades in other schools were not affected due to the re-calculation. 
+The effect of the removal of the scores for the 9th grade class was that there were no grades to analyze therefore no information could be obtained regarding the 9th grade class.  Math and Reading scores by other grades at Thomas High School or in all grades in other schools were not affected due to the re-calculation. 
 
 ![M-by Grade](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Math_by_Grade.png)
 ![reading by Grade ](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/Average_Reading_by_Grade.png)
 
 ### Scores by School Spending
-Scores by school spending were not affected after re-calculation.
+Scores by school spending were not effected after re-calculation.
 ![Scores by School Spending](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Spending.png)
 
 ### Scores by School Size
-Scores by school size were not affected after re-calculation.
+Scores by school size were not effected after re-calculation.
 ![Scores by School Size](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Size.png)
 
 
 ### Scores by School Type
-Scores by school Type were not affected after re-calculation.
+Scores by school Type were not effected after re-calculation.
 ![Scores by School Type](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Type.png)
 
 
 ## Summary
-The removal of the 9th grade math and reading scores significantly reduced the percent passing of the math, reading and overall percent passing for Thomas High School.  If not for the re-calculation Thomas High School would have lost its spot in the top five schools in the district. The removal of the scores also affected a minor but negligible change in the district percent passing.  
+The removal of the 9th grade math and reading scores significantly reduced the percent passing of the math, reading and overall percent passing for Thomas High School.  If not for the re-calculation Thomas High School would have lost its spot in the top five schools in the district. The removal of the scores had a minor but negligible impact to the over all district percent passing.  
 
 
