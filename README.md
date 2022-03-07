@@ -260,7 +260,7 @@ The affect of the removal of the scores for the 9th grade class on the District 
 ![Re-Analysis District Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/07aa8d6b447af22ba91923f6dd1240906a1b3ee2/Resources/District_Summary_df.png)
 
 ## Re-Analysis School Summary 
-Since the Thomas High School percentages were re-calculated without the 9th grade class total student numbers there was no effect on the school summary as a whole. Without removing the 9th grade total student numbers the effect was only evident within the passing percentages at Thomas High School.
+Since the Thomas High School percentages were re-calculated without the 9th grade class total student numbers there was no effect on the school summary as a whole. Without removing the 9th grade total student numbers only the passing percentages for Thomas High School were impacted.
 
 ![Re-Analysis School Summary](https://github.com/blueschistrocks/School_District_Analysis/blob/a15a3a14f1ad207569b22df3e98119b5a49d110a/Resources/School_Summary_df.png)
 
@@ -277,7 +277,7 @@ A chart of the Per School Summary Data after the Thomas High School Recalculatio
  
 
 ### Effect on Thomas High School 
-Since the math and reading scores were re-calculated the effect on Thomas Hight School was negligible.  However, if the scores had not been re-calculated the effect would have been significant, see below for the Thomas High School Scores without the 9th grade class prior to the re-calculation.
+Since the math and reading scores were re-calculated the effect on Thomas Hight School was negligible.  However, if the scores had not been re-calculated the impact would have been significant, see below for the Thomas High School Scores without the 9th grade class prior to the re-calculation.
 ![image](https://github.com/blueschistrocks/School_District_Analysis/blob/5b3604d5cf8a72544905f8617c70cf9c899ce176/Resources/THS_before_recal.png)
 
 ## Effect of 9th Grade Math and Reading Score Removal and Math and Reading Scores by Grade
@@ -293,7 +293,6 @@ Scores by school spending were not effected after re-calculation.
 ### Scores by School Size
 Scores by school size were not effected after re-calculation.
 ![Scores by School Size](https://github.com/blueschistrocks/School_District_Analysis/blob/2cecb0f109a6617964de9a82077c49d01c95c4a0/Resources/Scores_by_Size.png)
-
 
 ### Scores by School Type
 Scores by school Type were not effected after re-calculation.
